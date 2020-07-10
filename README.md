@@ -1,0 +1,2 @@
+# exercises
+Hands on exercises
