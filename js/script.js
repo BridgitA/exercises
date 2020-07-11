@@ -1,10 +1,11 @@
-function correctMethodName(){
-    return "Output Message";
+var worker;
+function startWorker(){
+    worker = new Worker("js/worker.js");
+    worker.onmessage = function(event){
+        document.getElementById("output").innerHTML += '<li>' + event.data + '</li>'
+    };
+
 }
-try{
-    var result = wrongMethodName(3);
-    document.writeln(result);
-}
-catch(error){
-    document.writeln('<h3>Error:&nbsp;</h3><p>' + error + '</p>');
+function stopWorker(){
+    worker.terminate();
 }
