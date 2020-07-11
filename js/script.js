@@ -1,10 +1,10 @@
-function handleClick(callback){
-    alert('This button has been clicked');
-    if (callback){
-        callback();
-    }
+function correctMethodName(){
+    return "Output Message";
 }
-
-function doSomethingElse(){
-    document.writeln('Test Message');
+try{
+    var result = wrongMethodName(3);
+    document.writeln(result);
+}
+catch(error){
+    document.writeln('<h3>Error:&nbsp;</h3><p>' + error + '</p>');
 }
