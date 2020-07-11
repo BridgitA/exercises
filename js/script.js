@@ -1,7 +1,10 @@
-var testVariable = null;
-var isUndefined = (testVariable === undefined);
-var isNull = (testVariable === null);
-var isEmpty = (testVariable === '');
-document.getElementById('isUndefined').innerHTML = isUndefined;
-document.getElementById('isNull').innerHTML = isNull;
-document.getElementById('isEmpty').innerHTML = isEmpty;
+function handleClick(callback){
+    alert('This button has been clicked');
+    if (callback){
+        callback();
+    }
+}
+
+function doSomethingElse(){
+    document.writeln('Test Message');
+}
